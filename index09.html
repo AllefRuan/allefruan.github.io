@@ -1,0 +1,41 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout - Carrinho</title>
+  <link rel="stylesheet" href="style09.css">
+  
+</head>
+<body>
+
+  <h1>Seu Carrinho</h1>
+  <div id="lista-carrinho"></div>
+  <div class="total" id="total"></div>
+  <button class="btn-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+
+  <script>
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+    const lista = document.getElementById("lista-carrinho");
+    const total = document.getElementById("total");
+
+    let soma = 0;
+    carrinho.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "item";
+      div.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+      lista.appendChild(div);
+      soma += item.preco;
+    });
+
+    total.textContent = `Total: R$ ${soma.toFixed(2)}`;
+
+    function finalizarCompra() {
+      alert("Compra finalizada com sucesso!");
+      localStorage.removeItem("carrinho");
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>

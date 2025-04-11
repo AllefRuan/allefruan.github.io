@@ -1,0 +1,37 @@
+
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .total {
+      font-size: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .btn-finalizar {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #468262;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn-finalizar:hover {
+      background-color: #218838;
+    }
+  
