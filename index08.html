@@ -1,134 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Arishop - Produtos Pet</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetShop - Loja</title>
   <link rel="stylesheet" href="style08.css">
 </head>
 <body>
 
   <header>
-    <h1>Arishop - Itens para Seu Pet</h1>
+    <h1>PetShop - Acessórios e Cuidados</h1>
   </header>
 
-  <div class="carrinho">
-    <a href="index09.html">🛒 Ver Carrinho</a>
+  <div class="container">
+    <div class="produtos" id="produtos">
+      <!-- Produtos aqui -->
+    </div>
+
+    <div class="carrinho">
+      <h2>Carrinho</h2>
+      <div id="itens-carrinho"></div>
+      <div class="total">Total: R$ <span id="total">0.00</span></div>
+    </div>
   </div>
 
-  <section class="produtos">
-
-    <div class="produto">
-      <img src="coleira_personalizada.jpeg" alt="Coleira Ajustável">
-      <h3>Coleira Regulável</h3>
-      <p>Preço: R$25,00</p>
-      <button onclick="adicionar('Coleira Regulável', 25)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="bebedouro passeio.jpeg" alt="Bebedouro Portátil">
-      <h3>Bebedouro para Passeio</h3>
-      <p>Preço: R$35,00</p>
-      <button onclick="adicionar('Bebedouro para Passeio', 35)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="bebedouro.jpeg" alt="Bebedouro de 2L">
-      <h3>Reservatório 2L</h3>
-      <p>Ideal para manter seu pet hidratado.</p>
-      <p>Preço: R$85,00</p>
-      <button onclick="adicionar('Reservatório 2L', 85)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="cesinha.jpg" alt="Caixa de Areia">
-      <h3>Caixa Sanitária</h3>
-      <p>Espaçosa e prática para gatos - 1x1 metro.</p>
-      <p>Preço: R$100,00</p>
-      <button onclick="adicionar('Caixa Sanitária', 100)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="escova vapor.jpeg" alt="Escova a Vapor">
-      <h3>Escova a Vapor</h3>
-      <p>Higieniza e trata a pelagem do pet.</p>
-      <p>Preço: R$55,00</p>
-      <button onclick="adicionar('Escova a Vapor', 55)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="maconha gato.jpeg" alt="Catnip">
-      <h3>Erva Catnip</h3>
-      <p>Estimula a diversão dos gatos com segurança.</p>
-      <p>Preço: R$14,90</p>
-      <button onclick="adicionar('Catnip', 14.90)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="mochila gatos.jpeg" alt="Mochila para Gatos">
-      <h3>Mochila Transportadora</h3>
-      <p>Leve seu gatinho com conforto e estilo.</p>
-      <p>Preço: R$89,90</p>
-      <button onclick="adicionar('Mochila Transportadora', 89.90)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="coleira_personalizada.jpeg" alt="Coleira Pet">
-      <h3>Coleira Estilosa</h3>
-      <p>Alta durabilidade e conforto garantido.</p>
-      <p>Preço: R$49,90</p>
-      <button onclick="adicionar('Coleira Estilosa', 49.90)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="coleira02.jpeg" alt="Coleira Premium">
-      <h3>Coleira Premium</h3>
-      <p>Elegância e resistência para seu pet.</p>
-      <p>Preço: R$49,90</p>
-      <button onclick="adicionar('Coleira Premium', 49.90)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="coleiras03.jpeg" alt="Coleira Soft">
-      <h3>Coleira Soft</h3>
-      <p>Confortável e ajustável, ideal para passeios.</p>
-      <p>Preço: R$31,90</p>
-      <button onclick="adicionar('Coleira Soft', 31.90)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="coleiras04.jpeg" alt="Coleira com Acessório">
-      <h3>Coleira com Dispenser</h3>
-      <p>Acompanha saquinho para higiene durante o passeio.</p>
-      <p>Preço: R$31,90</p>
-      <button onclick="adicionar('Coleira com Dispenser', 31.90)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="coleira05.jpg" alt="Coleira Light">
-      <h3>Coleira Light</h3>
-      <p>Fácil de usar e super confortável.</p>
-      <p>Preço: R$25,90</p>
-      <button onclick="adicionar('Coleira Light', 25.90)">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="coleira06.jpg" alt="Coleira Básica">
-      <h3>Coleira Básica</h3>
-      <p>Boa escolha para o dia a dia.</p>
-      <p>Preço: R$25,90</p>
-      <button onclick="adicionar('Coleira Básica', 25.90)">Adicionar ao Carrinho</button>
-    </div>
-
-  </section>
-
   <script>
-    function adicionar(nome, preco) {
-      const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-      carrinho.push({ nome, preco });
-      localStorage.setItem("carrinho", JSON.stringify(carrinho));
-      alert(`${nome} foi adicionado ao carrinho!`);
-    }
-  </script>
+    const produtos = [
+      { id: 1, nome: "Coleira Estampada", preco: 29.90, imagem: "https://via.placeholder.com/100" },
+      { id: 2, nome: "Ração Premium", preco: 89.90, imagem: "https://via.placeholder.com/100" },
+      { id: 3, nome: "Brinquedo Ossinho", preco: 15.50, imagem: "https://via.placeholder.com/100" },
+      { id: 4, nome: "Shampoo para Pelos", preco: 22.00, imagem: "https://via.placeholder.com/100" },
+    ];
 
+    const carrinho = [];
+
+    function exibirProdutos() {
+      const container = document.getElementById('produtos');
+      produtos.forEach(prod => {
+        const div = document.createElement('div');
+        div.classList.add('produto');
+        div.innerHTML = `
+          <img src="${prod.imagem}" alt="${prod.nome}">
+          <h3>${prod.nome}</h3>
+          <p>R$ ${prod.preco.toFixed(2)}</p>
+          <button onclick="adicionarAoCarrinho(${prod.id})">Adicionar ao Carrinho</button>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function adicionarAoCarrinho(id) {
+      const produto = produtos.find(p => p.id === id);
+      carrinho.push(produto);
+      atualizarCarrinho();
+    }
+
+    function atualizarCarrinho() {
+      const itensContainer = document.getElementById('itens-carrinho');
+      const totalContainer = document.getElementById('total');
+      itensContainer.innerHTML = '';
+      let total = 0;
+
+      carrinho.forEach((item, index) => {
+        total += item.preco;
+        const div = document.createElement('div');
+        div.classList.add('item-carrinho');
+        div.innerHTML = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+        itensContainer.appendChild(div);
+      });
+
+      totalContainer.textContent = total.toFixed(2);
+    }
+
+    // Inicializa
+    exibirProdutos();
+  </script>
 </body>
 </html>

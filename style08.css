@@ -1,92 +1,72 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    gap: 30px;
-    padding: 20px;
-    background: #f9f9f9;
-  }
-
-  .produtos.carrinho {
-    width: 50%;
-  }
-
-  .produto.item-carrinho {
-    background: white;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-  button {
-    background: #4CAF50;
-    color: white;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background: #45a049;
-  }
-
-  h2 {
-    margin-bottom: 10px;
-  }
-
-
-  .products {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
 }
 
-section#produtos{
-    margin: auto;
-}
-#products-card{
-    display: flex;
-    margin: auto;
-}
-
-div .product-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    width: 250px;
-    text-align: center;
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
-.product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+.container {
+  display: flex;
+  padding: 1rem;
+  gap: 2rem;
 }
 
-.product-card h2 {
-    font-size: 1.5em;
-    color: #333;
-    margin: 10px 0;
+.produtos {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
-.product-card p {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 10px;
+.produto {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+.produto img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
+.produto button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+}
 
+.carrinho {
+  flex: 1;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
 
+.carrinho h2 {
+  margin-top: 0;
+}
+
+.item-carrinho {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+
+.total {
+  margin-top: 1rem;
+  font-weight: bold;
+}

@@ -1,23 +1,41 @@
+<!-- login.html -->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Arishop</title>
-    <link rel="stylesheet" href= "style01.css">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Arishop</title>
+  <link rel="stylesheet" href="style01.css">
 </head>
-<body class="bg-image"> 
-    <div class="login-container">
-        <h1>Login Arishop</h1>
-        <form action="index.html">
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
-        </form>
-        <p class="register-link">Não tem uma conta? <a href="index02.html">Cadastre-se</a></p>
-        
+<body>
+  <div class="login-container">
+    <h2>Login Arishop</h2>
+    <input type="text" id="usuario" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="fazerLogin()">Entrar</button>
+    <div class="cadastro">
+      Não tem uma conta? <a href="index02.html">Cadastre-se</a>
     </div>
-    
+  </div>
+
+  <script>
+    function fazerLogin() {
+      const user = document.getElementById('usuario').value;
+      const pass = document.getElementById('senha').value;
+
+      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+      const encontrado = usuarios.find(u => u.usuario === user && u.senha === pass);
+
+      if (encontrado) {
+        alert('Login realizado com sucesso!');
+        localStorage.setItem('usuarioLogado', JSON.stringify(encontrado));
+        window.location.href = 'index.html';
+      } else {
+        alert('Usuário não encontrado. Redirecionando para cadastro.');
+        window.location.href = 'index02.html';
+      }
+    }
+  </script>
 </body>
 </html>

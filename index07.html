@@ -1,202 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rações</title>
-    <link rel="stylesheet" href="style07.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arishop - Rações</title>
+  <link rel="stylesheet" href="style07.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Arishop</div>
-        <nav>
-            <ul>
-                <li><a href="index.html" id="inicio-btn">Início</a></li>
-                <li><a href="index04.html" id="agenda-btn">Banho e tosa</a></li>
-                <li><a href="index09.html" id="acessorio-btn">Acessórios</a></li>
-                <li><a href="index05.html" target="_blank" id="faleconosco-btn">Contato</a></li>
-                <li><a href="index09.html" id="carrinho-btn">Carrinho</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <header>
-        <h1>Rações Premium</h1>
-    </header>
+  <header>
+    <h1>🐾 Arishop - Rações</h1>
+  </header>
 
-     <!-- rações para cachorro -->
-    <section id="produtos">
-        <h1>RAÇÕES PREMIUM PARA CACHORROS</h1>
-        <div id="products-card">
-            <div class="product-card">
-                <img src="raçao01.jpg" alt="Rações premium para dogs">
-                <h2>Biofresh</h2>
-                <p>Alta Palatabilidade, feito com mix de carnes, frutas, legumes e ervas frescas; - Sem adição de conservantes, corantes e aromatizantes artificiais.</p>
-                <p>Preço: R$250,00</p>
-                <button class="btn-comprar" onclick="adicionarAoCarrinho()">Comprar</button>
-                <script>
-                    function adicionarAoCarrinho() {
-                    alert("Produto adicionado ao carrinho!");
-                    }
-                </script>
-            </div>
+  <main>
+    <h2>Confira nossas rações!</h2>
+    <div class="produtos">
+      <div class="produto">
+        <img src="https://via.placeholder.com/250x180?text=Ração+Cachorro" alt="Ração Cachorro">
+        <h3>Ração Premium para Cachorros</h3>
+        <p>10kg - Sabor Frango</p>
+        <p><strong>R$ 89,90</strong></p>
+        <button onclick="adicionarAoCarrinho('Ração Premium Cachorro', 89.90)">Adicionar ao Carrinho</button>
+      </div>
 
-            <div class="product-card">
-                <img src="raçao02.jpg" alt="Rações premium para dogs">
-                <h2>Ração True</h2>
-                <p>Trazemos produtos feitos com carne de verdade e ingredientes naturais, como arroz integral, cenoura, brócolis e batata-doce. - Sem adição de conservantes, corantes e aromatizantes artificiais.</p>
-                <p>Preço: R$242,00</p>
-                <button class="btn-comprar" onclick="adicionarAoCarrinho()">Comprar</button>
-            <script>
-                function adicionarAoCarrinho() {
-                alert("Produto adicionado ao carrinho!");
-                }
-            </script>
-            </div>
+      <div class="produto">
+        <img src="https://via.placeholder.com/250x180?text=Ração+Gato" alt="Ração Gato">
+        <h3>Ração Super Gato</h3>
+        <p>5kg - Sabor Peixe</p>
+        <p><strong>R$ 59,90</strong></p>
+        <button onclick="adicionarAoCarrinho('Ração Super Gato', 59.90)">Adicionar ao Carrinho</button>
+      </div>
 
-            <div class="product-card">
-                <img src="raçao03.jpg" alt="Rações premium para dogs">
-                <h2>Gran Plus</h2>
-                <p>O alimento suculento feito com ingredientes selecionados e carnes nobres. Sem corantes e aromas artificiais.</p>
-                <p>Preço: R$146,00</p>
-                <button class="btn-comprar" onclick="adicionarAoCarrinho()">Comprar</button>
-            <script>
-                function adicionarAoCarrinho() {
-                alert("Produto adicionado ao carrinho!");
-                }
-            </script>
-            </div>
+      <div class="produto">
+        <img src="https://via.placeholder.com/250x180?text=Ração+Light" alt="Ração Light">
+        <h3>Ração Light Adulto</h3>
+        <p>8kg - Sabor Carne</p>
+        <p><strong>R$ 74,90</strong></p>
+        <button onclick="adicionarAoCarrinho('Ração Light Adulto', 74.90)">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </main>
 
-            <div class="product-card">
-                <img src="raçao04.jpg" alt="Rações premium para dogs" width="120px">
-                <h2> Premier</h2>
-                <p>Atende as particularidades da raça com grãos em tamanho especial, ajuda na diminuição da formação de tártaro, beleza e saúde para pelagem e pelos de seu pet, auxilia no bom funcionamento intestinal, auxilia na saúde oral.<p>
-                <p>Preço: R$95,90</p>
-                <button class="btn-comprar" onclick="adicionarAoCarrinho()">Comprar</button>
-            <script>
-                function adicionarAoCarrinho() {
-                alert("Produto adicionado ao carrinho!");
-                }
-            </script>
-            </div>
-
-            <div class="product-card">
-                <img src="raçao05.jpg" alt="Rações premium para dogs">
-                <h2>Golden fórmula mini bits
-                </h2>
-                <p>Promove saúde oral, pele nutrida e pelagem sedosa, intestino saudável e redução do odor das feses.<p>
-                <p>Preço: R$95,90</p>
-                <button class="btn-comprar" onclick="adicionarAoCarrinho()">Comprar</button>
-            <script>
-                function adicionarAoCarrinho() {
-                alert("Produto adicionado ao carrinho!");
-                }
-            </script>
-            </div>
-
-            <div class="product-card">
-                <img src="raçao06.jpg" alt="Rações premium para dogs" width="100px">
-                <h2>Ração Hill’s Science diet
-                </h2>
-                <p>Complexo exclusivo de ácidos graxos; - Proporciona longa expectativa de vida; - Sem corantes e saborizantes artificiais; - Formulada com ômega-6, vitamina E e C; <p>
-                <p>Preço: R$290,25</p>
-                <button class="btn-comprar" onclick="adicionarAoCarrinho()">Comprar</button>
-            <script>
-                function adicionarAoCarrinho() {
-                alert("Produto adicionado ao carrinho!");
-                }
-            </script>
-            </div>
-        </section>
-
-            <!-- raçoes para gatos -->
-
-    <section id="produtos">
-        <h1>RAÇÕES PREMIUM PARA GATOS</h1>
-        <div id="products-card">
-            <div class="product-card">
-                <img src="gato01.png" alt="Rações premium para cats">
-                <h2>Royal canin exigent</h2>
-                <p>Ração super premium indicada para gatos adultos de 1 a 10 anos de idade; - Satisfaz completamente o apetite, devido sua fórmula de palatabilidade superior;</p>
-                <p>Preço: R$118,90</p>
-                <button class="btn-comprar" onclick="adicionarAoCarrinho()">Comprar</button>
-            <script>
-                function adicionarAoCarrinho() {
-                alert("Produto adicionado ao carrinho!");
-                }
-            </script>
-            </div>
-
-            <div class="product-card">
-                <img src="gato02.png" alt="Rações premium para cats">
-                <h2>Royal canin cat premium filhotes</h2>
-                <p>Alimento completo indicado para gatos filhotes até 12 meses de idade; - Perfeito aproveitamento dos nutrientes, melhorando a qualidade das fezes.</p>
-                <p>Preço: R$123,50</p>
-                <button class="btn-comprar" onclick="adicionarAoCarrinho()">Comprar</button>
-            <script>
-                function adicionarAoCarrinho() {
-                alert("Produto adicionado ao carrinho!");
-                }
-            </script>
-            </div>
-
-            <div class="product-card">
-                <img src="gato03.png" alt="Rações premium para cats">
-                <h2>Purina proplan trato urinário</h2>
-                <p>Alimento completo indicado para gatos filhotes até 12 meses de idade; - Perfeito aproveitamento dos nutrientes, melhorando a qualidade das fezes.</p>
-                <p>Preço: R$215,51</p>
-                <button class="btn-comprar" onclick="adicionarAoCarrinho()">Comprar</button>
-            <script>
-                function adicionarAoCarrinho() {
-                alert("Produto adicionado ao carrinho!");
-                }
-            </script>
-            </div>
-
-            <div class="product-card">
-                <img src="gato04.png" alt="Rações premium para cats">
-                <h2>Gran plus para gatos</h2>
-                <p>Com fontes nobres de proteína; - Promove manutenção da massa muscular; - Sua receita é composta com ingredientes de alta qualidade; - Contribui para ossos e dentes saudáveis.</p>
-                <p>Preço: R$62,53</p>
-                <button class="btn-comprar" onclick="adicionarAoCarrinho()">Comprar</button>
-            <script>
-                function adicionarAoCarrinho() {
-                alert("Produto adicionado ao carrinho!");
-                }
-            </script>
-            </div>
-
-            <div class="product-card">
-                <img src="gato05.jpg" alt="Rações premium para cats">
-                <h2>Whiskas</h2>
-                <p>Desenvolvida nutricionalmente em conjunto com veterinários. Com múltiplas fibras para promover a saúde gastrointestinal. </p>
-                <p>Preço: R$159,90</p>
-                <button class="btn-comprar" onclick="adicionarAoCarrinho()">Comprar</button>
-            <script>
-                function adicionarAoCarrinho() {
-                alert("Produto adicionado ao carrinho!");
-                }
-            </script>
-            </div>
-
-            <div class="product-card">
-                <img src="gato06.jpg" alt="Rações premium para cats">
-                <h2>Ração Farmina N&D prime(cães e gatos)</h2>
-                <p>Ingredientes de qualidade e alto valor biológico; Receitas com ingredientes naturais e altamente selecionados; Alta digestibilidade.</p>
-                <p>Preço: R$179,90</p>
-                <button class="btn-comprar" onclick="adicionarAoCarrinho()">Comprar</button>
-            <script>
-                function adicionarAoCarrinho() {
-                alert("Produto adicionado ao carrinho!");
-                }
-            </script>
-            </div>
-
-
-
-
-                   
-    
-    
+  <script>
+    function adicionarAoCarrinho(nome, preco) {
+      const produto = { nome, preco };
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      carrinho.push(produto);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+      alert(`"${nome}" foi adicionado ao carrinho!`);
+    }
+  </script>
 </body>
 </html>
